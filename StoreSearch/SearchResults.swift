@@ -8,5 +8,5 @@
 import Foundation
 class SearchResults {
     var name = ""
-    var artistName = "" 
+    var artistName = ""
 }

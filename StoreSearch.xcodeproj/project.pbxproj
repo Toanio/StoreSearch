@@ -15,6 +15,8 @@
 		B08FEE0028D5B304009075EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B08FEDFF28D5B304009075EA /* Assets.xcassets */; };
 		B08FEE0328D5B304009075EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B08FEE0128D5B304009075EA /* LaunchScreen.storyboard */; };
 		B08FEE0B28D5C6F3009075EA /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FEE0A28D5C6F3009075EA /* SearchResults.swift */; };
+		B0C8945D28D70B3200E2BF5D /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0C8945C28D70B3200E2BF5D /* SearchResultCell.xib */; };
+		B0C8945F28D733F800E2BF5D /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8945E28D733F800E2BF5D /* SearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B08FEE0228D5B304009075EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B08FEE0428D5B304009075EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B08FEE0A28D5C6F3009075EA /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		B0C8945C28D70B3200E2BF5D /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		B0C8945E28D733F800E2BF5D /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				B08FEE0428D5B304009075EA /* Info.plist */,
 				B08FEDFC28D5B301009075EA /* StoreSearch.xcdatamodeld */,
 				B08FEE0A28D5C6F3009075EA /* SearchResults.swift */,
+				B0C8945C28D70B3200E2BF5D /* SearchResultCell.xib */,
+				B0C8945E28D733F800E2BF5D /* SearchResultCell.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 			files = (
 				B08FEE0328D5B304009075EA /* LaunchScreen.storyboard in Resources */,
 				B08FEE0028D5B304009075EA /* Assets.xcassets in Resources */,
+				B0C8945D28D70B3200E2BF5D /* SearchResultCell.xib in Resources */,
 				B08FEDFB28D5B301009075EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +155,7 @@
 				B08FEDF428D5B301009075EA /* AppDelegate.swift in Sources */,
 				B08FEE0B28D5C6F3009075EA /* SearchResults.swift in Sources */,
 				B08FEDF628D5B301009075EA /* SceneDelegate.swift in Sources */,
+				B0C8945F28D733F800E2BF5D /* SearchResultCell.swift in Sources */,
 				B08FEDFE28D5B301009075EA /* StoreSearch.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
