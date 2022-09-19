@@ -34,7 +34,7 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvT-Es-jFr">
-                        <rect key="frame" x="84" y="46" width="275" height="21"/>
+                        <rect key="frame" x="84" y="46" width="275" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="ArtistName"/>
                         <nil key="highlightedColor"/>
@@ -49,9 +49,11 @@
                     <constraint firstItem="O6b-2I-Jza" firstAttribute="top" secondItem="MIi-nr-2Fz" secondAttribute="top" constant="16" id="mGL-I0-Yym"/>
                     <constraint firstItem="O6b-2I-Jza" firstAttribute="leading" secondItem="oV8-9S-Mum" secondAttribute="trailing" constant="8" id="up8-9Z-yMm"/>
                     <constraint firstItem="XvT-Es-jFr" firstAttribute="leading" secondItem="oV8-9S-Mum" secondAttribute="trailing" constant="8" id="urT-MU-Y8w"/>
+                    <constraint firstAttribute="bottom" secondItem="XvT-Es-jFr" secondAttribute="bottom" constant="16" id="ybF-RG-65X"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="artistNameLbl" destination="XvT-Es-jFr" id="9AQ-Uu-kEg"/>
                 <outlet property="artworkImageView" destination="oV8-9S-Mum" id="hE5-QW-Ihk"/>
                 <outlet property="nameLabel" destination="O6b-2I-Jza" id="Edm-fT-FLs"/>
             </connections>
