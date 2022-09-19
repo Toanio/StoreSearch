@@ -28,6 +28,7 @@ class SearchViewController: UIViewController {
 //MAKR: - Search Bar Delegate
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
         searchResults = []
         if searchBar.text! != "justin" {
             for i in 0...2{
@@ -39,7 +40,6 @@ extension SearchViewController: UISearchBarDelegate {
         }
         hasSearched = true
         tableView.reloadData()
-        searchBar.resignFirstResponder()
     }
 }
 
@@ -64,7 +64,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     ) -> UITableViewCell {
         let cellIdentifier = "SearchResultCell"
         
-         let cell = tableView.dequeueReusableCell(
+         var cell = tableView.dequeueReusableCell(
             withIdentifier: cellIdentifier,
             for: indexPath) as! SearchResultCell
         if searchResults.count == 0 {
