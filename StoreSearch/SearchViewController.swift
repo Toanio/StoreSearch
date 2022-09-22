@@ -10,7 +10,7 @@ import UIKit
 class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-
+    
     var searchResults = [SearchResults]()
     var hasSearched = false
     
@@ -37,35 +37,45 @@ class SearchViewController: UIViewController {
             bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.nothingFoundCell)
     }
-
-
-}
-func performStoreRequest(with url: URL) -> Data? {
-    do{
-        return try Data(contentsOf: url)
-    } catch {
-        print("Download Error: \(error.localizedDescription)")
-        return nil
+    
+    
+    
+    func performStoreRequest(with url: URL) -> Data? {
+        do{
+            return try Data(contentsOf: url)
+        } catch {
+            showNetworkError()
+            print("Download Error: \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
+    func parse(data: Data) ->[SearchResults] {
+        do{
+            let decoder = JSONDecoder()
+            let result = try decoder.decode(ResultArray.self, from: data)
+            return result.results
+        } catch {
+            print("JSON Error: \(error)")
+            return []
+        }
+    }
+    func showNetworkError() {
+        let alert = UIAlertController(
+            title: "Whooops...",
+            message: "There was an error accessing the iTunes Store." +
+            " Please try again.",
+            preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }
-
-func parse(data: Data) ->[SearchResults] {
-    do{
-        let decoder = JSONDecoder()
-        let result = try decoder.decode(ResultArray.self, from: data)
-        return result.results
-    } catch {
-        print("JSON Error: \(error)")
-        return []
-    }
-}
-
 //MAKR: - Search Bar Delegate
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
-            
             hasSearched = true
             searchResults = []
             
