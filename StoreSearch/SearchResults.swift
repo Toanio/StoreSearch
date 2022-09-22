@@ -6,7 +6,20 @@
 //
 
 import Foundation
-class SearchResults {
-    var name = ""
-    var artistName = ""
+
+class ResultArray: Codable {
+    var resultCount = 0
+    var results = [SearchResults]()
+}
+class SearchResults: Codable, CustomStringConvertible {
+    var description: String {
+        return "\nResult - Name: \(name), Artist Name: - \(artistName ?? "None")"
+    }
+    
+    var artistName: String? = ""
+    var trackName: String? = ""
+    
+    var name: String {
+        return trackName ?? ""
+    }
 }
