@@ -18,6 +18,7 @@
 		B0C8945F28D733F800E2BF5D /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8945E28D733F800E2BF5D /* SearchResultCell.swift */; };
 		B0C8946328D8C33300E2BF5D /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0C8946228D8C33300E2BF5D /* NothingFoundCell.xib */; };
 		B0C8946528DE30B300E2BF5D /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0C8946428DE30B300E2BF5D /* LoadingCell.xib */; };
+		B0C8946728E302F900E2BF5D /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8946628E302F900E2BF5D /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B0C8945E28D733F800E2BF5D /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		B0C8946228D8C33300E2BF5D /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		B0C8946428DE30B300E2BF5D /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		B0C8946628E302F900E2BF5D /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				B0C8945E28D733F800E2BF5D /* SearchResultCell.swift */,
 				B0C8946228D8C33300E2BF5D /* NothingFoundCell.xib */,
 				B0C8946428DE30B300E2BF5D /* LoadingCell.xib */,
+				B0C8946628E302F900E2BF5D /* UIImageView+DownloadImage.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C8946728E302F900E2BF5D /* UIImageView+DownloadImage.swift in Sources */,
 				B08FEDF828D5B301009075EA /* SearchViewController.swift in Sources */,
 				B08FEDF428D5B301009075EA /* AppDelegate.swift in Sources */,
 				B08FEE0B28D5C6F3009075EA /* SearchResults.swift in Sources */,
