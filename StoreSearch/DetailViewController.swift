@@ -80,7 +80,7 @@ class DetailViewController: UIViewController {
     }
     deinit{
         print("deinit \(self)")
-        downloadTask?.cancel()z
+        downloadTask?.cancel()
     }
     
 }
