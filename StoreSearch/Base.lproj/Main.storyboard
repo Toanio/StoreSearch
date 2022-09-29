@@ -35,12 +35,12 @@
                                 </connections>
                             </searchBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="TXr-uZ-NcK">
-                                <rect key="frame" x="-1" y="60" width="376" height="44"/>
+                                <rect key="frame" x="-2" y="60" width="377" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" id="gAE-md-xxB">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ZOf-ag-S40">
-                                            <rect key="frame" x="16" y="5.5" width="344" height="33"/>
+                                            <rect key="frame" x="16" y="5.5" width="345" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
                                                 <segment title="All"/>
@@ -163,6 +163,9 @@
                                                         <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="$9.99 " backgroundImage="PriceButton"/>
+                                                        <connections>
+                                                            <action selector="openInStore" destination="N0R-vr-QRi" eventType="touchUpInside" id="ovX-jd-zwO"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
