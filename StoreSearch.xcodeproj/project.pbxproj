@@ -19,6 +19,7 @@
 		B0C8946328D8C33300E2BF5D /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0C8946228D8C33300E2BF5D /* NothingFoundCell.xib */; };
 		B0C8946528DE30B300E2BF5D /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0C8946428DE30B300E2BF5D /* LoadingCell.xib */; };
 		B0C8946728E302F900E2BF5D /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8946628E302F900E2BF5D /* UIImageView+DownloadImage.swift */; };
+		B0C8946928E340FC00E2BF5D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8946828E340FC00E2BF5D /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B0C8946228D8C33300E2BF5D /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		B0C8946428DE30B300E2BF5D /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		B0C8946628E302F900E2BF5D /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		B0C8946828E340FC00E2BF5D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				B0C8946228D8C33300E2BF5D /* NothingFoundCell.xib */,
 				B0C8946428DE30B300E2BF5D /* LoadingCell.xib */,
 				B0C8946628E302F900E2BF5D /* UIImageView+DownloadImage.swift */,
+				B0C8946828E340FC00E2BF5D /* DetailViewController.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				B08FEDF628D5B301009075EA /* SceneDelegate.swift in Sources */,
 				B0C8945F28D733F800E2BF5D /* SearchResultCell.swift in Sources */,
 				B08FEDFE28D5B301009075EA /* StoreSearch.xcdatamodeld in Sources */,
+				B0C8946928E340FC00E2BF5D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -181,7 +181,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         didSelectRowAt indexPath: IndexPath
     ) {
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "ShowDetail" {
+//            segue.destination.modalPresentationStyle = .pageSheet
+//        }
+//    }
     
     func tableView(
         _ tableView: UITableView,
