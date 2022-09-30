@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B07B131A28E72BE5000476FA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B131928E72BE5000476FA /* GradientView.swift */; };
+		B07B131C28E73EE8000476FA /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B131B28E73EE8000476FA /* BounceAnimationController.swift */; };
 		B08FEDF428D5B301009075EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FEDF328D5B301009075EA /* AppDelegate.swift */; };
 		B08FEDF628D5B301009075EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FEDF528D5B301009075EA /* SceneDelegate.swift */; };
 		B08FEDF828D5B301009075EA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FEDF728D5B301009075EA /* SearchViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		B07B131928E72BE5000476FA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		B07B131B28E73EE8000476FA /* BounceAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
 		B08FEDF028D5B301009075EA /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08FEDF328D5B301009075EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08FEDF528D5B301009075EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				B0C8946628E302F900E2BF5D /* UIImageView+DownloadImage.swift */,
 				B0C8946828E340FC00E2BF5D /* DetailViewController.swift */,
 				B07B131928E72BE5000476FA /* GradientView.swift */,
+				B07B131B28E73EE8000476FA /* BounceAnimationController.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				B08FEDF828D5B301009075EA /* SearchViewController.swift in Sources */,
 				B08FEDF428D5B301009075EA /* AppDelegate.swift in Sources */,
 				B08FEE0B28D5C6F3009075EA /* SearchResults.swift in Sources */,
+				B07B131C28E73EE8000476FA /* BounceAnimationController.swift in Sources */,
 				B08FEDF628D5B301009075EA /* SceneDelegate.swift in Sources */,
 				B0C8945F28D733F800E2BF5D /* SearchResultCell.swift in Sources */,
 				B08FEDFE28D5B301009075EA /* StoreSearch.xcdatamodeld in Sources */,
