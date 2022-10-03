@@ -20,6 +20,12 @@ class DetailViewController: UIViewController {
     var searchResult: SearchResults!
     var downloadTask: URLSessionDownloadTask?
     
+    enum AnimationStyle {
+        case slide
+        case fade
+    }
+    var dismissStyle = AnimationStyle.fade
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         popupView.layer.cornerRadius = 10
@@ -37,6 +43,7 @@ class DetailViewController: UIViewController {
 
     //MARK: - Actions
     @IBAction func close() {
+        AnimationStyle.slide
         dismiss(animated: true, completion: nil)
     }
     @IBAction func openInStore() {
@@ -104,11 +111,22 @@ extension DetailViewController: UIGestureRecognizerDelegate {
 }
 
 extension DetailViewController: UIViewControllerTransitioningDelegate {
-    func animationController(
-        forPresented presented: UIViewController,
-        presenting: UIViewController,
-        source: UIViewController
-    ) -> UIViewControllerAnimatedTransitioning? {
-        return BounceAnimationController()
+  func animationController(
+    forPresented presented: UIViewController,
+    presenting: UIViewController,
+    source: UIViewController
+  ) -> UIViewControllerAnimatedTransitioning? {
+    return BounceAnimationController()
+  }
+
+  func animationController(
+    forDismissed dismissed: UIViewController
+  ) -> UIViewControllerAnimatedTransitioning? {
+    switch dismissStyle {
+    case .slide:
+      return SlideOutAnimationController()
+    case .fade:
+      return FadeOutAnimationController()
     }
+  }
 }
