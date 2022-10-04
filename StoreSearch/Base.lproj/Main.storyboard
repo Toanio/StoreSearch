@@ -35,12 +35,12 @@
                                 </connections>
                             </searchBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="TXr-uZ-NcK">
-                                <rect key="frame" x="-4" y="-233" width="671" height="44"/>
+                                <rect key="frame" x="-4" y="-233" width="671" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" id="gAE-md-xxB">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ZOf-ag-S40">
-                                            <rect key="frame" x="20" y="5.5" width="631" height="33"/>
+                                            <rect key="frame" x="20" y="5" width="631" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
                                                 <segment title="All"/>
@@ -223,16 +223,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jtW-1H-Xkj">
+                                <rect key="frame" x="275" y="174" width="117" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="4Wu-y1-6Or" eventType="valueChanged" id="e8Z-Ze-dkF"/>
+                                </connections>
+                            </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPR-41-fll">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="VKd-Cl-Gzj"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="qBT-7i-0j3"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4Wu-y1-6Or" id="Q9b-LP-ca0"/>
+                                </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jtW-1H-Xkj">
-                                <rect key="frame" x="275" y="174" width="117" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UhI-W5-eYf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

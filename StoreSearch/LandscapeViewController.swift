@@ -28,6 +28,7 @@ class LandscapeViewController: UIViewController {
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
         //scrollView.contentSize = CGSize(width: 1000, height: 1000)
+        pageControll.numberOfPages = 0
     }
     
     override func viewWillLayoutSubviews() {
@@ -100,5 +101,27 @@ class LandscapeViewController: UIViewController {
             height: scrollView.bounds.size.height)
         print("Number of pages: \(numPages)")
         
+        pageControll.numberOfPages = numPages
+        pageControll.currentPage = 0
+        
+    }
+    @IBAction func pageChanged (_ sender: UIPageControl) {
+        UIView.animate(
+            withDuration: 0.3,
+            delay: 0,
+            options: [.curveEaseInOut],
+            animations: {
+                self.scrollView.contentOffset = CGPoint(
+                    x: self.scrollView.bounds.size.width * CGFloat(sender.currentPage),
+                    y: 0)
+            },
+            completion: nil)
+    }
+}
+extension LandscapeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let width = scrollView.bounds.size.width
+        let page = Int((scrollView.contentOffset.x + width / 2) / width)
+        pageControll.currentPage = page
     }
 }
