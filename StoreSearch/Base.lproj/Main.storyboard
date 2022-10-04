@@ -223,20 +223,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're in lanscape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nE-ep-X9M">
-                                <rect key="frame" x="266" y="177" width="135" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPR-41-fll">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="VKd-Cl-Gzj"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="qBT-7i-0j3"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jtW-1H-Xkj">
+                                <rect key="frame" x="275" y="174" width="117" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UhI-W5-eYf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="7nE-ep-X9M" firstAttribute="centerX" secondItem="bGq-Iw-9ds" secondAttribute="centerX" id="QRx-I4-RsB"/>
-                            <constraint firstItem="7nE-ep-X9M" firstAttribute="centerY" secondItem="bGq-Iw-9ds" secondAttribute="centerY" id="qP9-cy-LLK"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControll" destination="jtW-1H-Xkj" id="dza-FK-zeg"/>
+                        <outlet property="scrollView" destination="aPR-41-fll" id="FEA-dI-bXJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3I-6m-MAi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
