@@ -8,7 +8,7 @@
 import UIKit
 
 class LandscapeViewController: UIViewController {
-    var searchResults = [SearchResults] ()
+    var search: Search!
     private var firstTime = true
     private var downloads = [URLSessionDownloadTask] ()
     
@@ -45,7 +45,7 @@ class LandscapeViewController: UIViewController {
         
         if firstTime {
             firstTime = false
-            tileButtons(searchResults)
+            tileButtons(search.searchResults)
             
         }
     }
@@ -75,7 +75,7 @@ class LandscapeViewController: UIViewController {
         var column = 0
         var x = marginX
         
-        for(index , result) in searchResults.enumerated() {
+        for(index , result) in search.searchResults.enumerated() {
             let button = UIButton(type: .custom)
             button.setBackgroundImage(UIImage(named: "LandscapeButton"), for: .normal)
             button.frame = CGRect(
@@ -95,7 +95,7 @@ class LandscapeViewController: UIViewController {
         }
         
         let buttonPerPage = columsPerPage * rowsPerPage
-        let numPages = 1 + (searchResults.count - 1) / buttonPerPage
+        let numPages = 1 + (search.searchResults.count - 1) / buttonPerPage
         scrollView.contentSize = CGSize(
             width: CGFloat(numPages) * viewWidth,
             height: scrollView.bounds.size.height)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B03663C828EC857B003FC662 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03663C728EC857B003FC662 /* Search.swift */; };
 		B07B131A28E72BE5000476FA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B131928E72BE5000476FA /* GradientView.swift */; };
 		B07B131C28E73EE8000476FA /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B131B28E73EE8000476FA /* BounceAnimationController.swift */; };
 		B07B131E28E810DD000476FA /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B131D28E810DD000476FA /* LandscapeViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B03663C728EC857B003FC662 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		B07B131928E72BE5000476FA /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		B07B131B28E73EE8000476FA /* BounceAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
 		B07B131D28E810DD000476FA /* LandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				B07B131D28E810DD000476FA /* LandscapeViewController.swift */,
 				B07B745628E96BB100001B0A /* FadeOutAnimationController.swift */,
 				B07B745828EAF28700001B0A /* SlideOutAnimationController.swift */,
+				B03663C728EC857B003FC662 /* Search.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				B08FEDFE28D5B301009075EA /* StoreSearch.xcdatamodeld in Sources */,
 				B0C8946928E340FC00E2BF5D /* DetailViewController.swift in Sources */,
 				B07B131A28E72BE5000476FA /* GradientView.swift in Sources */,
+				B03663C828EC857B003FC662 /* Search.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
