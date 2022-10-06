@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" id="gAE-md-xxB">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ZOf-ag-S40">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ZOf-ag-S40">
                                             <rect key="frame" x="20" y="5" width="631" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
@@ -246,13 +246,17 @@
                     <connections>
                         <outlet property="pageControll" destination="jtW-1H-Xkj" id="dza-FK-zeg"/>
                         <outlet property="scrollView" destination="aPR-41-fll" id="FEA-dI-bXJ"/>
+                        <segue destination="N0R-vr-QRi" kind="presentation" identifier="ShowDetail" id="6Dy-Mt-BWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3I-6m-MAi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1964" y="-25"/>
+            <point key="canvasLocation" x="1057" y="-1183"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6Dy-Mt-BWy"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="PriceButton" width="11" height="24"/>
