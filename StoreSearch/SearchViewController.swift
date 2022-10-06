@@ -78,10 +78,12 @@ class SearchViewController: UIViewController {
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
-            let detailViewController = segue.destination as! DetailViewController
-            let indexPath = sender as! IndexPath
-            let searchResult = search.searchResults[indexPath.row]
-            detailViewController.searchResult = searchResult
+            if case .results(let list) = search.state {
+                let detailViewController = segue.destination as! DetailViewController
+                let indexPath = sender as! IndexPath
+                let searchResult = list[indexPath.row]
+                detailViewController.searchResult = searchResult
+            }
         }
     }
     
@@ -165,31 +167,27 @@ extension SearchViewController: UISearchBarDelegate {
             _ tableView: UITableView,
             cellForRowAt indexPath: IndexPath
         ) -> UITableViewCell {
-            let cellIdentifier = TableView.CellIdentifiers.searchResultCell
             
-            var cell = tableView.dequeueReusableCell(
-                withIdentifier: cellIdentifier,
-                for: indexPath) as! SearchResultCell
-            if search.isLoading {
+            switch search.state {
+            case .notSearchedYet:
+                fatalError("Should never get here")
+            case .loading:
                 let cell = tableView.dequeueReusableCell(
                     withIdentifier: TableView.CellIdentifiers.loadingCell,
                     for: indexPath)
-                
                 let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
                 spinner.startAnimating()
                 return cell
+            case .noResults:
+                return tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.nothingFoundCell, for: indexPath)
+            case .results(let list):
+                let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.searchResultCell,
+                for: indexPath) as! SearchResultCell
                 
-            } else
-            if search.searchResults.count == 0 {
-                return tableView.dequeueReusableCell(
-                    withIdentifier: TableView.CellIdentifiers.nothingFoundCell,
-                    for: indexPath)
-            } else {
-                let searchResult = search.searchResults[indexPath.row]
+                let searchResult = list[indexPath.row]
                 cell.configure(for: searchResult)
+                return cell
             }
-            
-            return cell
         }
         
         func position(for bar: UIBarPositioning) -> UIBarPosition {
@@ -208,9 +206,10 @@ extension SearchViewController: UISearchBarDelegate {
             _ tableView: UITableView,
             willSelectRowAt indexPath: IndexPath
         ) -> IndexPath? {
-            if search.searchResults.count == 0 || search.isLoading {
+            switch search.state {
+            case .notSearchedYet, .noResults, .loading:
                 return nil
-            } else {
+            case .results:
                 return indexPath
             }
         }
